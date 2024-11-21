@@ -32,7 +32,7 @@ describe('Auth Controller', () => {
         .post('/api/auth/register')
         .send({ username: 'testuser', password: 'password123' });
 
-      expect(res.statusCode).toBe(205);
+      expect(res.statusCode).toBe(206);
       expect(res.body).toHaveProperty('token', 'fakeToken');
     });
 
