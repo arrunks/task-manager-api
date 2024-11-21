@@ -15,7 +15,7 @@ app.post('/api/auth/login', loginUser);
 
 // Mock the User model and generateToken function
 jest.mock('../models/User');
-jest.mock('../utils/generateToken');
+jest.mock('../utils/generatetoken');
 
 describe('Auth Controller', () => {
   beforeEach(() => {

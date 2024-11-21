@@ -1,6 +1,6 @@
 // controllers/authController.js
 const User = require('../models/User');
-const generateToken = require('../utils/generateToken');
+const generateToken = require('../utils/generatetoken');
 
 // Register a new user
 const registerUser = async (req, res) => {
