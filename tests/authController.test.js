@@ -3,7 +3,7 @@ const request = require('supertest');
 const express = require('express');
 const { registerUser, loginUser } = require('../controllers/authController');
 const User = require('../models/User');
-const generateToken = require('../utils/generateToken');
+const generateToken = require('../utils/generatetoken');
 
 // Create a new Express application instance
 const app = express();
