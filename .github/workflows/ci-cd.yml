@@ -3,10 +3,10 @@ name: CI/CD Pipeline with Quality Gates
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   quality-checks:
