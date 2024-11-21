@@ -1,7 +1,6 @@
 // tests/authMiddleware.test.js
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
-const mongoose = require('mongoose');
 const protect = require('../middleware/authMiddleware');
 const User = require('../models/User');
 

@@ -6,6 +6,7 @@ const createTask = async (req, res) => {
     const task = await Task.create({ ...req.body, user: req.user._id });
     res.status(201).json(task);
   } catch (error) {
+    console.log(error);
     res.status(400).json({ message: 'Task creation failed' });
   }
 };
@@ -15,6 +16,7 @@ const getTasks = async (req, res) => {
     const tasks = await Task.find({ user: req.user._id });
     res.json(tasks);
   } catch (error) {
+    console.log(error);
     res.status(400).json({ message: 'Fetching tasks failed' });
   }
 };
@@ -28,6 +30,7 @@ const updateTask = async (req, res) => {
     const updatedTask = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
     res.json(updatedTask);
   } catch (error) {
+    console.log(error);
     res.status(400).json({ message: 'Task update failed' });
   }
 };
@@ -41,6 +44,7 @@ const deleteTask = async (req, res) => {
     await task.remove();
     res.json({ message: 'Task removed' });
   } catch (error) {
+    console.log(error);
     res.status(400).json({ message: 'Task deletion failed' });
   }
 };
